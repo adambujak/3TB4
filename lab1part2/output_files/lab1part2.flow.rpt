@@ -1,5 +1,5 @@
 Flow report for lab1part2
-Sun Jan 26 11:56:27 2020
+Sun Jan 26 12:26:07 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
@@ -40,12 +40,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Sun Jan 26 11:56:27 2020          ;
+; Flow Status                 ; Flow Failed - Sun Jan 26 12:26:07 2020          ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
 ; Revision Name               ; lab1part2                                       ;
-; Top-level Entity Name       ; lab1part2                                       ;
+; Top-level Entity Name       ; seven_seg_decoder                               ;
 ; Family                      ; Cyclone V                                       ;
-; Device                      ; 5CGXFC7C7F23C8                                  ;
+; Device                      ; 5CSEMA5F31C6                                    ;
 ; Timing Models               ; Final                                           ;
 ; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
 ; Total registers             ; N/A until Partition Merge                       ;
@@ -62,25 +62,32 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2020 11:56:15 ;
+; Start date & time ; 01/26/2020 12:25:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab1part2           ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116552057366061.158005777523848        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++-------------------------------------+----------------------------------------+---------------+-------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name       ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 116552057366061.158005955321460        ; --            ; --                ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; seven_seg_decoder ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; seven_seg_decoder ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; seven_seg_decoder ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                ; --         ;
+; TOP_LEVEL_ENTITY                    ; seven_seg_decoder                      ; lab1part2     ; --                ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -88,8 +95,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4795 MB             ; 00:00:30                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4789 MB             ; 00:00:31                           ;
+; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:31                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

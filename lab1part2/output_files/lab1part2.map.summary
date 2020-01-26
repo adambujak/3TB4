@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Sun Jan 26 11:56:27 2020
+Analysis & Synthesis Status : Failed - Sun Jan 26 12:26:07 2020
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 Revision Name : lab1part2
-Top-level Entity Name : lab1part2
+Top-level Entity Name : seven_seg_decoder
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
