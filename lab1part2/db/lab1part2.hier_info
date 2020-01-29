@@ -1,13 +1,29 @@
-|seven_seg_decoder
+|lab1part2
+SW[0] => ~NO_FANOUT~
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+HEX0[0] <= seven_seg_decoder:seven_seg.port1
+HEX0[1] <= seven_seg_decoder:seven_seg.port1
+HEX0[2] <= seven_seg_decoder:seven_seg.port1
+HEX0[3] <= seven_seg_decoder:seven_seg.port1
+HEX0[4] <= seven_seg_decoder:seven_seg.port1
+HEX0[5] <= seven_seg_decoder:seven_seg.port1
+HEX0[6] <= seven_seg_decoder:seven_seg.port1
+
+
+|lab1part2|seven_seg_decoder:seven_seg
 SW[0] => Add1.IN2
 SW[0] => HEX0.IN1
 SW[0] => Add2.IN2
 SW[0] => HEX0.IN1
+SW[0] => Decoder0.IN3
 SW[0] => Add3.IN1
 SW[0] => Add0.IN2
 SW[1] => HEX0.IN1
 SW[1] => HEX0.IN1
 SW[1] => HEX0.IN1
+SW[1] => Decoder0.IN2
 SW[1] => HEX0.IN1
 SW[1] => HEX0.IN1
 SW[1] => HEX0.IN0
@@ -16,18 +32,20 @@ SW[2] => HEX0.IN1
 SW[2] => HEX0.IN0
 SW[2] => HEX0.IN1
 SW[2] => HEX0.IN1
+SW[2] => Decoder0.IN1
 SW[2] => HEX0.IN1
 SW[3] => Add1.IN1
 SW[3] => Add3.IN2
+SW[3] => Decoder0.IN0
 SW[3] => Add2.IN1
 SW[3] => HEX0.IN1
 SW[3] => Add0.IN1
 HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
-HEX0[2] <= <GND>
-HEX0[3] <= <GND>
-HEX0[4] <= <GND>
-HEX0[5] <= <GND>
-HEX0[6] <= <GND>
+HEX0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
