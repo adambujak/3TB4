@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Adam/Programming/Verilog/3tb4/lab1part1/simulation/qsim
+vcounter
+Z1 !s110 1580278101
+!i10b 1
+!s100 G:ASKKhdGTDfFFkIM;1`n0
+In`QUCh56alz]Z95E2aVVI3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1580278101
+Z3 8lab1part1.vo
+Z4 Flab1part1.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1580278101.000000
+Z8 !s107 lab1part1.vo|
+Z9 !s90 -work|work|lab1part1.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vcounter_vlg_vec_tst
+R1
+!i10b 1
+!s100 Q1K@A490KJ8zU<C`_HLho0
+I[b@^QOc?neTUS`SZC?j:A0
+R2
+R0
+w1580278099
+8counter.vwf.vt
+Fcounter.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 counter.vwf.vt|
+!s90 -work|work|counter.vwf.vt|
+!i113 1
+R10
+R11
+vd_flip_flop
+!s110 1580277454
+!i10b 1
+!s100 Gfk8Mi@?@eMXYFBYL<NC:3
+IHl3g0P54ecUf7HM@KBI<;1
+R2
+R0
+w1580277454
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1580277454.000000
+R8
+R9
+!i113 1
+R10
+R11
+vd_flip_flop_vlg_vec_tst
+!s110 1580277455
+!i10b 1
+!s100 h_mbQKo]Q03a9I1@dk@E_2
+I3SVASPUz[YBCck9;<GB_D1
+R2
+R0
+w1580277452
+8d_flip_flop.vwf.vt
+Fd_flip_flop.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R13
+!s107 d_flip_flop.vwf.vt|
+!s90 -work|work|d_flip_flop.vwf.vt|
+!i113 1
+R10
+R11
+vd_latch
+Z14 !s110 1580277906
+!i10b 1
+!s100 NWcnK;_=3Hh^XCb@Bf?]X1
+IF0T;iaV[RGW1]>Yb:14SV0
+R2
+R0
+w1580277905
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1580277906.000000
+R8
+R9
+!i113 1
+R10
+R11
+vd_latch_vlg_vec_tst
+R14
+!i10b 1
+!s100 H7`ViTJe@]zBN`iT=NOCl3
+IEGJzSQDb3@NLT2=D:6[AJ0
+R2
+R0
+w1580277904
+8d_latch.vwf.vt
+Fd_latch.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R15
+!s107 d_latch.vwf.vt|
+!s90 -work|work|d_latch.vwf.vt|
+!i113 1
+R10
+R11
+vmux_4to1_case
+Z16 !s110 1580278455
+!i10b 1
+!s100 ECnmmeQW]inm9:KU1nR213
+I2kfz2H@`XC[:3XE3D=32A2
+R2
+R0
+w1580278454
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1580278455.000000
+R8
+R9
+!i113 1
+R10
+R11
+vmux_4to1_case_vlg_vec_tst
+R16
+!i10b 1
+!s100 QbKl=95K2H;lR3c27Q[3o1
+I06VC:DHFnLP?gL5INoWzO0
+R2
+R0
+w1580278453
+8mux_4to1_case.vwf.vt
+Fmux_4to1_case.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R17
+!s107 mux_4to1_case.vwf.vt|
+!s90 -work|work|mux_4to1_case.vwf.vt|
+!i113 1
+R10
+R11

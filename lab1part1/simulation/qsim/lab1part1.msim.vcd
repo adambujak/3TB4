@@ -1,0 +1,309 @@
+$comment
+	File created using the following command:
+		vcd file lab1part1.msim.vcd -direction
+$end
+$date
+	Wed Jan 29 01:14:16 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module mux_4to1_case_vlg_vec_tst $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # c $end
+$var reg 1 $ d $end
+$var reg 2 % sel [1:0] $end
+$var wire 1 & out $end
+
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var tri1 1 * devclrn $end
+$var tri1 1 + devpor $end
+$var tri1 1 , devoe $end
+$var wire 1 - ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 . d~input_o $end
+$var wire 1 / c~input_o $end
+$var wire 1 0 sel[0]~input_o $end
+$var wire 1 1 sel[1]~input_o $end
+$var wire 1 2 a~input_o $end
+$var wire 1 3 b~input_o $end
+$var wire 1 4 Mux0~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+b0 %
+0&
+0'
+1(
+x)
+1*
+1+
+1,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+$end
+#5000
+1!
+12
+14
+1&
+#10000
+1"
+0!
+13
+02
+04
+0&
+#15000
+1#
+1!
+1/
+12
+14
+1&
+#20000
+1$
+0"
+0!
+1.
+03
+02
+04
+0&
+#25000
+1!
+12
+14
+1&
+#30000
+0#
+1"
+0!
+0/
+13
+02
+04
+0&
+#35000
+1!
+12
+14
+1&
+#40000
+0$
+0"
+0!
+0.
+03
+02
+04
+0&
+#45000
+1#
+1!
+1/
+12
+14
+1&
+#50000
+b1 %
+1"
+0!
+10
+13
+02
+#55000
+1!
+12
+#60000
+1$
+0#
+0"
+0!
+1.
+0/
+03
+02
+04
+0&
+#65000
+1!
+12
+#70000
+1"
+0!
+13
+02
+14
+1&
+#75000
+1#
+1!
+1/
+12
+#80000
+0$
+0"
+0!
+0.
+03
+02
+04
+0&
+#85000
+1!
+12
+#90000
+0#
+1"
+0!
+0/
+13
+02
+14
+1&
+#95000
+1!
+12
+#100000
+b11 %
+b10 %
+1$
+0"
+0!
+00
+11
+1.
+03
+02
+04
+0&
+#105000
+1#
+1!
+1/
+12
+14
+1&
+#110000
+1"
+0!
+13
+02
+#115000
+1!
+12
+#120000
+0$
+0#
+0"
+0!
+0.
+0/
+03
+02
+04
+0&
+#125000
+1!
+12
+#130000
+1"
+0!
+13
+02
+#135000
+1#
+1!
+1/
+12
+14
+1&
+#140000
+1$
+0"
+0!
+1.
+03
+02
+#145000
+1!
+12
+#150000
+b11 %
+0#
+1"
+0!
+10
+0/
+13
+02
+#155000
+1!
+12
+#160000
+0$
+0"
+0!
+0.
+03
+02
+04
+0&
+#165000
+1#
+1!
+1/
+12
+#170000
+1"
+0!
+13
+02
+#175000
+1!
+12
+#180000
+1$
+0#
+0"
+0!
+1.
+0/
+03
+02
+14
+1&
+#185000
+1!
+12
+#190000
+1"
+0!
+13
+02
+#195000
+1#
+1!
+1/
+12
+#200000
