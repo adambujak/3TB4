@@ -1,6 +1,6 @@
 Flow report for lab1part2
-Wed Jan 29 01:36:55 2020
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Wed Jan 29 10:58:42 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Jan 29 01:36:49 2020       ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name                   ; lab1part2                                   ;
-; Top-level Entity Name           ; lab1part2                                   ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 11 / 457 ( 2 % )                            ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Jan 29 10:58:33 2020           ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                   ; lab1part2                                       ;
+; Top-level Entity Name           ; lab1part2                                       ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CSEMA5F31C6                                    ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 24 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 36                                              ;
+; Total pins                      ; 22 / 457 ( 5 % )                                ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                           ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                   ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/29/2020 01:35:57 ;
+; Start date & time ; 01/29/2020 10:57:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab1part2           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 75361033362422.158027975605892         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116552057366061.158031343009148        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
@@ -99,11 +99,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 4790 MB             ; 00:00:22                           ;
-; Fitter                    ; 00:00:30     ; 1.0                     ; 6488 MB             ; 00:00:46                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 4834 MB             ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 5103 MB             ; 00:00:05                           ;
-; Total                     ; 00:00:55     ; --                      ; --                  ; 00:01:22                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4823 MB             ; 00:00:36                           ;
+; Fitter                    ; 00:00:50     ; 1.0                     ; 6346 MB             ; 00:01:16                           ;
+; Assembler                 ; 00:00:13     ; 1.0                     ; 4855 MB             ; 00:00:13                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 5131 MB             ; 00:00:07                           ;
+; Total                     ; 00:01:26     ; --                      ; --                  ; 00:02:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,10 +112,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; UNICORN          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; UNICORN          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; UNICORN          ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; UNICORN          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-BBP1QG2  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-BBP1QG2  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-BBP1QG2  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-BBP1QG2  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

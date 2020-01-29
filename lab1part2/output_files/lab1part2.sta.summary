@@ -2,4 +2,100 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -1.447
+TNS   : -33.769
+
+Type  : Slow 1100mV 85C Model Setup 'KEY[3]'
+Slack : -0.315
+TNS   : -1.433
+
+Type  : Slow 1100mV 85C Model Hold 'KEY[3]'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -15.656
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[3]'
+Slack : -0.394
+TNS   : -3.120
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -1.569
+TNS   : -36.614
+
+Type  : Slow 1100mV 0C Model Setup 'KEY[3]'
+Slack : -0.372
+TNS   : -1.746
+
+Type  : Slow 1100mV 0C Model Hold 'KEY[3]'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -17.228
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[3]'
+Slack : -0.394
+TNS   : -3.305
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -0.348
+TNS   : -5.424
+
+Type  : Fast 1100mV 85C Model Setup 'KEY[3]'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'KEY[3]'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[3]'
+Slack : -0.085
+TNS   : -0.507
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.084
+TNS   : -2.458
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -0.330
+TNS   : -4.942
+
+Type  : Fast 1100mV 0C Model Setup 'KEY[3]'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'KEY[3]'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[3]'
+Slack : -0.083
+TNS   : -0.495
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.082
+TNS   : -2.412
+
 ------------------------------------------------------------

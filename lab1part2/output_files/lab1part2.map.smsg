@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at lab1part2.v(43): always construct contains both blocking and non-blocking assignments File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/lab1part2/lab1part2.v Line: 43
+Warning (10268): Verilog HDL information at lab1part2.v(106): always construct contains both blocking and non-blocking assignments File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/lab1part2/lab1part2.v Line: 106
