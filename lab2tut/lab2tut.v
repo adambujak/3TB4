@@ -102,8 +102,15 @@ module seven_seg_decoder ( input [3:0] SW, output [6:0] HEX0 );
 	end
 endmodule
 
-module counter(input clk, input reset_n, start_n, stop_n, , output reg [19:0] ms_count);
-/* fill in your code here */
+module counter(input clk, input reset_n, start_n, stop_n, output reg [19:0] ms_count);
+	parameter WIDTH=20;
+	//2’s power of 26 is 67,108,864.
+	//that is ~1 second (more than 1 second), if count using CLOCK_50.
+	always @(posedge clk, negedge reset_n)
+		if (!reset_n)
+			result<=20'b0;
+		else if (enable)
+			result<=result+1'b1;
 endmodule
 
 module lab2tut (input CLOCK_50, input [2:0] KEY, output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
