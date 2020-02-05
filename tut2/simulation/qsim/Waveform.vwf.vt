@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/04/2020 22:31:30"
+// Generated on "02/05/2020 02:27:58"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          tut2
 // 
@@ -29,41 +29,56 @@
 module tut2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg clk;
+reg CLOCK_50;
+reg [2:0] KEY;
 // wires                                               
-wire clk2;
+wire [6:0] HEX0;
+wire [6:0] HEX1;
+wire [6:0] HEX2;
+wire [6:0] HEX3;
+wire [6:0] HEX4;
+wire [6:0] HEX5;
 
 // assign statements (if any)                          
 tut2 i1 (
 // port map - connection between master ports and signals/registers   
-	.clk(clk),
-	.clk2(clk2)
+	.CLOCK_50(CLOCK_50),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.HEX4(HEX4),
+	.HEX5(HEX5),
+	.KEY(KEY)
 );
 initial 
 begin 
-#400000 $finish;
+#2000000 $finish;
 end 
 
-// clk
+// CLOCK_50
+always
+begin
+	CLOCK_50 = 1'b0;
+	CLOCK_50 = #5000 1'b1;
+	#5000;
+end 
+// KEY[ 2 ]
 initial
 begin
-	repeat(19)
-	begin
-		clk = 1'b0;
-		clk = #5000 1'b1;
-		# 5000;
-	end
-	clk = 1'b0;
-	clk = #5000 1'b1;
-	clk = #4000 1'b0;
-	clk = #6000 1'b1;
-	# 5000;
-	repeat(19)
-	begin
-		clk = 1'b0;
-		clk = #5000 1'b1;
-		# 5000;
-	end
+	KEY[2] = 1'b1;
+end 
+// KEY[ 1 ]
+initial
+begin
+	KEY[1] = 1'b1;
+	KEY[1] = #40000 1'b0;
+	KEY[1] = #20000 1'b1;
+end 
+// KEY[ 0 ]
+initial
+begin
+	KEY[0] = 1'b1;
 end 
 endmodule
 

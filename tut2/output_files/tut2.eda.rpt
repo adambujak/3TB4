@@ -1,5 +1,5 @@
 EDA Netlist Writer report for tut2
-Tue Feb 04 22:31:32 2020
+Wed Feb 05 02:27:59 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Feb 04 22:31:32 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Feb 05 02:27:59 2020 ;
 ; Revision Name             ; tut2                                  ;
 ; Top-level Entity Name     ; tut2                                  ;
 ; Family                    ; Cyclone V                             ;
@@ -93,14 +93,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Feb 04 22:31:31 2020
+    Info: Processing started: Wed Feb 05 02:27:58 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Adam/Programming/Verilog/3tb4/tut2/simulation/qsim/ tut2 -c tut2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file tut2.vo in folder "C:/Users/Adam/Programming/Verilog/3tb4/tut2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Feb 04 22:31:32 2020
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Wed Feb 05 02:28:00 2020
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
