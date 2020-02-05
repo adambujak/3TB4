@@ -172,6 +172,90 @@
 					"strict" : false
 				},
 				{
+					"name" : "ms[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ms[19]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_en",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[0]",
 					"strict" : false
 				},

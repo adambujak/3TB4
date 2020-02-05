@@ -45,6 +45,27 @@ HEX5[3] <= seven_seg_decoder:decoder5.port1
 HEX5[4] <= seven_seg_decoder:decoder5.port1
 HEX5[5] <= seven_seg_decoder:decoder5.port1
 HEX5[6] <= seven_seg_decoder:decoder5.port1
+ms[0] <= ms[0].DB_MAX_OUTPUT_PORT_TYPE
+ms[1] <= ms[1].DB_MAX_OUTPUT_PORT_TYPE
+ms[2] <= ms[2].DB_MAX_OUTPUT_PORT_TYPE
+ms[3] <= ms[3].DB_MAX_OUTPUT_PORT_TYPE
+ms[4] <= ms[4].DB_MAX_OUTPUT_PORT_TYPE
+ms[5] <= ms[5].DB_MAX_OUTPUT_PORT_TYPE
+ms[6] <= ms[6].DB_MAX_OUTPUT_PORT_TYPE
+ms[7] <= ms[7].DB_MAX_OUTPUT_PORT_TYPE
+ms[8] <= ms[8].DB_MAX_OUTPUT_PORT_TYPE
+ms[9] <= ms[9].DB_MAX_OUTPUT_PORT_TYPE
+ms[10] <= ms[10].DB_MAX_OUTPUT_PORT_TYPE
+ms[11] <= ms[11].DB_MAX_OUTPUT_PORT_TYPE
+ms[12] <= ms[12].DB_MAX_OUTPUT_PORT_TYPE
+ms[13] <= ms[13].DB_MAX_OUTPUT_PORT_TYPE
+ms[14] <= ms[14].DB_MAX_OUTPUT_PORT_TYPE
+ms[15] <= ms[15].DB_MAX_OUTPUT_PORT_TYPE
+ms[16] <= ms[16].DB_MAX_OUTPUT_PORT_TYPE
+ms[17] <= ms[17].DB_MAX_OUTPUT_PORT_TYPE
+ms[18] <= ms[18].DB_MAX_OUTPUT_PORT_TYPE
+ms[19] <= ms[19].DB_MAX_OUTPUT_PORT_TYPE
+clk_en <= clk_en.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |tut2|clock_divider:comb_3
