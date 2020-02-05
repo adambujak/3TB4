@@ -1,0 +1,75 @@
+|tut2
+clk => clk.IN1
+clk2 <= clock_divider:comb_3.port2
+
+
+|tut2|clock_divider:comb_3
+Clock => countQ[0].CLK
+Clock => countQ[1].CLK
+Clock => countQ[2].CLK
+Clock => countQ[3].CLK
+Clock => countQ[4].CLK
+Clock => countQ[5].CLK
+Clock => countQ[6].CLK
+Clock => countQ[7].CLK
+Clock => countQ[8].CLK
+Clock => countQ[9].CLK
+Clock => countQ[10].CLK
+Clock => countQ[11].CLK
+Clock => countQ[12].CLK
+Clock => countQ[13].CLK
+Clock => countQ[14].CLK
+Clock => countQ[15].CLK
+Clock => countQ[16].CLK
+Clock => countQ[17].CLK
+Clock => countQ[18].CLK
+Clock => countQ[19].CLK
+Clock => countQ[20].CLK
+Clock => countQ[21].CLK
+Clock => countQ[22].CLK
+Clock => countQ[23].CLK
+Clock => countQ[24].CLK
+Clock => countQ[25].CLK
+Clock => countQ[26].CLK
+Clock => countQ[27].CLK
+Clock => countQ[28].CLK
+Clock => countQ[29].CLK
+Clock => countQ[30].CLK
+Clock => countQ[31].CLK
+Clock => clk_ms~reg0.CLK
+Reset_n => countQ[0].ENA
+Reset_n => clk_ms~reg0.ENA
+Reset_n => countQ[31].ENA
+Reset_n => countQ[30].ENA
+Reset_n => countQ[29].ENA
+Reset_n => countQ[28].ENA
+Reset_n => countQ[27].ENA
+Reset_n => countQ[26].ENA
+Reset_n => countQ[25].ENA
+Reset_n => countQ[24].ENA
+Reset_n => countQ[23].ENA
+Reset_n => countQ[22].ENA
+Reset_n => countQ[21].ENA
+Reset_n => countQ[20].ENA
+Reset_n => countQ[19].ENA
+Reset_n => countQ[18].ENA
+Reset_n => countQ[17].ENA
+Reset_n => countQ[16].ENA
+Reset_n => countQ[15].ENA
+Reset_n => countQ[14].ENA
+Reset_n => countQ[13].ENA
+Reset_n => countQ[12].ENA
+Reset_n => countQ[11].ENA
+Reset_n => countQ[10].ENA
+Reset_n => countQ[9].ENA
+Reset_n => countQ[8].ENA
+Reset_n => countQ[7].ENA
+Reset_n => countQ[6].ENA
+Reset_n => countQ[5].ENA
+Reset_n => countQ[4].ENA
+Reset_n => countQ[3].ENA
+Reset_n => countQ[2].ENA
+Reset_n => countQ[1].ENA
+clk_ms <= clk_ms~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
