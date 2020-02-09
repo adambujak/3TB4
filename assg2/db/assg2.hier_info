@@ -1,9 +1,0 @@
-|assg2
-w => w_values[0].DATAIN
-clk => w_values[0].CLK
-clk => w_values[1].CLK
-clk => w_values[2].CLK
-clk => w_values[3].CLK
-z <= z.DB_MAX_OUTPUT_PORT_TYPE
-
-

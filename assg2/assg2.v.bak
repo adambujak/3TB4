@@ -1,4 +1,0 @@
-module assg2 (input wire w,clk, output wire z);
-	reg w_values [3:0];
-	always @ (clk)
-	begi
