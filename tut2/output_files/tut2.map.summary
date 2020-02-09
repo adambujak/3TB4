@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Feb 05 02:26:50 2020
-Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Wed Feb 05 10:26:56 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
 Revision Name : tut2
 Top-level Entity Name : tut2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 54
-Total pins : 46
+Total pins : 67
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
