@@ -19,8 +19,20 @@ bcd_digit_5);
 	always @ (*)
 		begin
 		//set all 6 digits to 0
-		/* fill your code here */
+		bcd_digit[0] <= 1'b0;
+		bcd_digit[1] <= 1'b0;
+		bcd_digit[2] <= 1'b0;
+		bcd_digit[3] <= 1'b0;
+		bcd_digit[4] <= 1'b0;
+		bcd_digit[5] <= 1'b0;
+		bcd_digit[6] <= 1'b0;
 		//shift 20 times
+		bcd_digit[0] = bcd_digit[0] << 20;
+		bcd_digit[1] = bcd_digit[0] << 20;
+		bcd_digit[2] = bcd_digit[0] << 20;
+		bcd_digit[3] = bcd_digit[0] << 20;
+		bcd_digit[4] = bcd_digit[0] << 20;
+		bcd_digit[5] = bcd_digit[0] << 20;
 			for (i=19; i>=0; i=i-1)
 			begin
 				//check all 6 BCD tetrads, if >=5 then add 3
@@ -102,15 +114,14 @@ module seven_seg_decoder ( input [3:0] SW, output [6:0] HEX0 );
 	end
 endmodule
 
-module counter(input clk, input reset_n, start_n, stop_n, output reg [19:0] ms_count);
+module counter(input clk, reset_n, start_n, stop_n, output reg [WIDTH:0] ms_count);
 	parameter WIDTH=20;
-	//2’s power of 26 is 67,108,864.
-	//that is ~1 second (more than 1 second), if count using CLOCK_50.
-	always @(posedge clk, negedge reset_n)
-		if (!reset_n)
-			result<=20'b0;
-		else if (enable)
-			result<=result+1'b1;
+	
+	always @(posedge clk, negedge reset_n, negedge start_n)
+		if (!reset_n) //pressed button will send logic 0
+			ms_count<=20'b0;
+		else
+			ms_count<=ms_count+1'b1;
 endmodule
 
 module lab2tut (input CLOCK_50, input [2:0] KEY, output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
