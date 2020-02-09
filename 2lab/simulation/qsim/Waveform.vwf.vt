@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/09/2020 04:13:23"
+// Generated on "02/09/2020 13:35:48"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          lab2
 // 
@@ -29,47 +29,61 @@
 module lab2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg clk;
-reg reset_n;
-reg resume_n;
+reg CLOCK_50;
+reg [3:0] KEY;
 // wires                                               
-wire [13:0] random;
-wire rnd_ready;
+wire [6:0] HEX0;
+wire [6:0] HEX1;
+wire [6:0] HEX2;
+wire [6:0] HEX3;
+wire [6:0] HEX4;
+wire [6:0] HEX5;
+wire [9:0] LEDR;
 
 // assign statements (if any)                          
 lab2 i1 (
 // port map - connection between master ports and signals/registers   
-	.clk(clk),
-	.random(random),
-	.reset_n(reset_n),
-	.resume_n(resume_n),
-	.rnd_ready(rnd_ready)
+	.CLOCK_50(CLOCK_50),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.HEX4(HEX4),
+	.HEX5(HEX5),
+	.KEY(KEY),
+	.LEDR(LEDR)
 );
 initial 
 begin 
-#200000 $finish;
+#100000000 $finish;
 end 
 
-// clk
+// CLOCK_50
 always
 begin
-	clk = 1'b0;
-	clk = #5000 1'b1;
-	#5000;
+	CLOCK_50 = 1'b0;
+	CLOCK_50 = #1000 1'b1;
+	#1000;
 end 
-
-// reset_n
+// KEY[ 3 ]
 initial
 begin
-	reset_n = 1'b1;
-	reset_n = #30000 1'b0;
-	reset_n = #10000 1'b1;
+	KEY[3] = 1'b0;
 end 
-
-// resume_n
+// KEY[ 2 ]
 initial
 begin
-	resume_n = 1'b1;
+	KEY[2] = 1'b0;
+end 
+// KEY[ 1 ]
+initial
+begin
+	KEY[1] = 1'b0;
+end 
+// KEY[ 0 ]
+initial
+begin
+	KEY[0] = 1'b0;
 end 
 endmodule
 
