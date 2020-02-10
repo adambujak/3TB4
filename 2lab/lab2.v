@@ -106,9 +106,8 @@ module random (input clk, reset_n, resume_n, output reg [11:0] random, output re
 				reg_values[0]=reg_values[0] ^ reg_values[1];
 				//tap 1 of the diagram from the lab manual
 				
-				random = {reg_values[11:1], feedback};
+				random = {reg_values[11:1], feedback} + 12'd2000; //can change 200 accordingly
 				
-				random = random + 12'd1000;
 			end //end of ENABLE.
 		end
 	end

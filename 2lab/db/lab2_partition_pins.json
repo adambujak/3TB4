@@ -20,6 +20,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "random[4]",
+					"strict" : false
+				},
+				{
 					"name" : "random[5]",
 					"strict" : false
 				},
