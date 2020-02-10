@@ -48,11 +48,11 @@ module random (input clk, reset_n, resume_n, output reg [13:0] random, output re
 				
 				random = {reg_values[13:1], feedback};
 				
-//				random = reg_values + 14'd1000;
-//				if (random > 14'd5000)
-//				begin
-//					random = reg_values % 14'd5000;
-//				end
+				random = reg_values + 14'd1000;
+				if (random > 14'd5000)
+				begin
+					random = reg_values % 14'd5000;
+				end
 			end //end of ENABLE.
 		end
 	end

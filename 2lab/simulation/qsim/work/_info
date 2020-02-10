@@ -16,19 +16,19 @@ IQFRHlVZL0l9o7bjJFdmQ63
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Adam/Programming/3tb4/2lab/simulation/qsim
 w1581273352
-8lab2.vo
-Flab2.vo
-L0 31
-Z3 OV;L;10.5b;63
+Z3 8lab2.vo
+Z4 Flab2.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1581273356.000000
-!s107 lab2.vo|
-!s90 -work|work|lab2.vo|
+Z7 !s108 1581273356.000000
+Z8 !s107 lab2.vo|
+Z9 !s90 -work|work|lab2.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z10 o-work work
+Z11 tCvgOpt 0
 vlab2_vlg_vec_tst
 R0
 !i10b 1
@@ -37,16 +37,58 @@ IXJd8JXE5_8OkW04nIWRSo2
 R1
 R2
 w1581273348
-8Waveform.vwf.vt
-FWaveform.vwf.vt
-L0 29
-R3
+Z12 8Waveform.vwf.vt
+Z13 FWaveform.vwf.vt
+Z14 L0 29
+R6
 r1
 !s85 0
 31
-R4
+R7
 !s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
+Z15 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
+R10
+R11
+vrandom
+Z16 !s110 1581370736
+!i10b 1
+!s100 ^HCG`TDV8dcm;HBH?S33D0
+Ii;5K:8dlhU0Uz`0dN1:T<0
+R1
+Z17 dC:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim
+w1581370735
+R3
+R4
 R5
 R6
+r1
+!s85 0
+31
+Z18 !s108 1581370736.000000
+R8
+R9
+!i113 1
+R10
+R11
+vrandom_vlg_vec_tst
+R16
+!i10b 1
+!s100 F;D^j`0k@QBSUj36?;B3G1
+ISSc>zF;jYeOJ<f8QAHn9j0
+R1
+R17
+w1581370733
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+R18
+!s107 Waveform.vwf.vt|
+R15
+!i113 1
+R10
+R11

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sun Feb 09 16:43:37 2020
-Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Fitter Status : Successful - Mon Feb 10 16:24:32 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : lab2
-Top-level Entity Name : lab2
+Top-level Entity Name : random
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 354 / 32,070 ( 1 % )
-Total registers : 130
-Total pins : 57 / 457 ( 12 % )
+Logic utilization (in ALMs) : 37 / 32,070 ( < 1 % )
+Total registers : 21
+Total pins : 18 / 457 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

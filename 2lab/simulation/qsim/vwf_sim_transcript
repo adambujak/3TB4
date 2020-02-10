@@ -7,8 +7,9 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2 -c lab2 --vector_source="C:/Users/Adam/Programming/3tb4/2lab/Waveform.vwf" --testbench_file="C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2 -c lab2 --vector_source="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/Waveform.vwf" --testbench_file="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/Waveform.vwf.vt"
 
+Warning (292006): Can't contact license server "27000@alteralm.cas.mcmaster.ca" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
@@ -25,11 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Feb 09 13:35:45 2020
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2 -c lab2 --vector_source=C:/Users/Adam/Programming/3tb4/2lab/Waveform.vwf --testbench_file=C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/Waveform.vwf.vt
+    Info: Processing started: Mon Feb 10 16:38:51 2020
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2 -c lab2 --vector_source="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/Waveform.vwf" --testbench_file="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/Waveform.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-tor source file when writing test bench files
 
 Completed successfully. 
 
@@ -37,8 +36,9 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/" lab2 -c lab2
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/" lab2 -c lab2
 
+Warning (292006): Can't contact license server "27000@alteralm.cas.mcmaster.ca" -- this server will be ignored.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
@@ -55,21 +55,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Feb 09 13:35:49 2020
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/ lab2 -c lab2
+    Info: Processing started: Mon Feb 10 16:38:53 2020
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/" lab2 -c lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file lab2.vo in folder "C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4737 megabytes
-    Info: Processing ended: Sun Feb 09 13:35:52 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info (204019): Generated file lab2.vo in folder "C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4740 megabytes
+    Info: Processing ended: Mon Feb 10 16:38:55 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/lab2.do generated.
+C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/lab2.do generated.
 
 Completed successfully. 
 
@@ -79,61 +79,56 @@ C:/intelFPGA/17.1/modelsim_ase/win32aloem/vsim -c -do lab2.do
 
 Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
 
 
 # do lab2.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:35:56 on Feb 09,2020
+# Start time: 16:38:56 on Feb 10,2020
 # vlog -work work lab2.vo 
 
-# -- Compiling module lab2
+# -- Compiling module random
 # 
 # Top level modules:
-# 	lab2
-
-# End time: 13:35:56 on Feb 09,2020, Elapsed time: 0:00:00
+# 	random
+# End time: 16:38:56 on Feb 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:35:56 on Feb 09,2020
+
+# Start time: 16:38:56 on Feb 10,2020
 # vlog -work work Waveform.vwf.vt 
-# -- Compiling module lab2_vlg_vec_tst
+# -- Compiling module random_vlg_vec_tst
 # 
 # Top level modules:
-# 	lab2_vlg_vec_tst
-# End time: 13:35:56 on Feb 09,2020, Elapsed time: 0:00:00
+# 	random_vlg_vec_tst
+# End time: 16:38:56 on Feb 10,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.lab2_vlg_vec_tst 
-# Start time: 13:35:58 on Feb 09,2020
-# Loading work.lab2_vlg_vec_tst
-# Loading work.lab2
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.random_vlg_vec_tst 
+# Start time: 16:38:56 on Feb 10,2020
+# Loading work.random_vlg_vec_tst
+# Loading work.random
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#25
 
-# ** Note: $finish    : Waveform.vwf.vt(58)
-#    Time: 100 us  Iteration: 0  Instance: /lab2_vlg_vec_tst
-
-# End time: 13:35:59 on Feb 09,2020, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform.vwf.vt(50)
+#    Time: 100 us  Iteration: 0  Instance: /random_vlg_vec_tst
+# End time: 16:38:58 on Feb 10,2020, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Adam/Programming/3tb4/2lab/Waveform.vwf...
+Reading C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/Waveform.vwf...
 
-Reading C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/lab2.msim.vcd...
+Reading C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/lab2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Adam/Programming/3tb4/2lab/simulation/qsim/lab2_20200209133559.sim.vwf
+Writing the resulting VWF to C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/simulation/qsim/lab2_20200210163858.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for lab2
-Sun Feb 09 16:41:19 2020
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Mon Feb 10 16:23:08 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -13,18 +13,13 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |lab2
- 13. Parameter Settings for User Entity Instance: clock_divider:comb_36
- 14. Parameter Settings for User Entity Instance: blinkHEX:comb_40
- 15. Port Connectivity Checks: "random:comb_39"
- 16. Port Connectivity Checks: "counter:comb_37"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,27 +42,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 09 16:41:19 2020           ;
-; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
-; Revision Name                   ; lab2                                            ;
-; Top-level Entity Name           ; lab2                                            ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 105                                             ;
-; Total pins                      ; 57                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Feb 10 16:23:08 2020       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; lab2                                        ;
+; Top-level Entity Name           ; random                                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 21                                          ;
+; Total pins                      ; 18                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -76,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; lab2               ; lab2               ;
+; Top-level entity name                                                           ; random             ; lab2               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -174,122 +169,71 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; counter.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/counter.v       ;         ;
-; clock_divider.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/clock_divider.v ;         ;
-; blinkHEX.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/blinkHEX.v      ;         ;
-; lab2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v          ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; lab2.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; db/lpm_divide_55m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/lpm_divide_55m.tdf      ;         ;
+; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/sign_div_unsign_8nh.tdf ;         ;
+; db/alt_u_div_m2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/alt_u_div_m2f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 361          ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 580          ;
-;     -- 7 input functions                    ; 9            ;
-;     -- 6 input functions                    ; 130          ;
-;     -- 5 input functions                    ; 146          ;
-;     -- 4 input functions                    ; 110          ;
-;     -- <=3 input functions                  ; 185          ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 105          ;
-;                                             ;              ;
-; I/O pins                                    ; 57           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[1]~input ;
-; Maximum fan-out                             ; 64           ;
-; Total fan-out                               ; 2929         ;
-; Average fan-out                             ; 3.67         ;
-+---------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                               ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                       ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 37                                                                                                                          ;
+;                                             ;                                                                                                                             ;
+; Combinational ALUT usage for logic          ; 69                                                                                                                          ;
+;     -- 7 input functions                    ; 0                                                                                                                           ;
+;     -- 6 input functions                    ; 2                                                                                                                           ;
+;     -- 5 input functions                    ; 8                                                                                                                           ;
+;     -- 4 input functions                    ; 6                                                                                                                           ;
+;     -- <=3 input functions                  ; 53                                                                                                                          ;
+;                                             ;                                                                                                                             ;
+; Dedicated logic registers                   ; 21                                                                                                                          ;
+;                                             ;                                                                                                                             ;
+; I/O pins                                    ; 18                                                                                                                          ;
+;                                             ;                                                                                                                             ;
+; Total DSP Blocks                            ; 0                                                                                                                           ;
+;                                             ;                                                                                                                             ;
+; Maximum fan-out node                        ; lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider|add_sub_12_result_int[13]~1 ;
+; Maximum fan-out                             ; 25                                                                                                                          ;
+; Total fan-out                               ; 324                                                                                                                         ;
+; Average fan-out                             ; 2.57                                                                                                                        ;
++---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name          ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
-; |lab2                             ; 580 (86)            ; 105 (19)                  ; 0                 ; 0          ; 57   ; 0            ; |lab2                              ; lab2                 ; work         ;
-;    |blinkHEX:comb_40|             ; 17 (17)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |lab2|blinkHEX:comb_40             ; blinkHEX             ; work         ;
-;    |clock_divider:comb_36|        ; 43 (43)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |lab2|clock_divider:comb_36        ; clock_divider        ; work         ;
-;    |counter:comb_37|              ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |lab2|counter:comb_37              ; counter              ; work         ;
-;    |counter:comb_38|              ; 21 (21)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |lab2|counter:comb_38              ; counter              ; work         ;
-;    |hex_to_bcd_converter:comb_41| ; 134 (134)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|hex_to_bcd_converter:comb_41 ; hex_to_bcd_converter ; work         ;
-;    |hex_to_bcd_converter:comb_42| ; 167 (167)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|hex_to_bcd_converter:comb_42 ; hex_to_bcd_converter ; work         ;
-;    |mux_4to1_case:comb_43|        ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_43        ; mux_4to1_case        ; work         ;
-;    |mux_4to1_case:comb_44|        ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_44        ; mux_4to1_case        ; work         ;
-;    |mux_4to1_case:comb_45|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_45        ; mux_4to1_case        ; work         ;
-;    |mux_4to1_case:comb_46|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_46        ; mux_4to1_case        ; work         ;
-;    |mux_4to1_case:comb_47|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_47        ; mux_4to1_case        ; work         ;
-;    |mux_4to1_case:comb_48|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|mux_4to1_case:comb_48        ; mux_4to1_case        ; work         ;
-;    |seven_seg_decoder:decoder0|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder0   ; seven_seg_decoder    ; work         ;
-;    |seven_seg_decoder:decoder1|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder1   ; seven_seg_decoder    ; work         ;
-;    |seven_seg_decoder:decoder2|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder2   ; seven_seg_decoder    ; work         ;
-;    |seven_seg_decoder:decoder3|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder3   ; seven_seg_decoder    ; work         ;
-;    |seven_seg_decoder:decoder4|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder4   ; seven_seg_decoder    ; work         ;
-;    |seven_seg_decoder:decoder5|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab2|seven_seg_decoder:decoder5   ; seven_seg_decoder    ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |random                                ; 69 (18)             ; 21 (21)                   ; 0                 ; 0          ; 18   ; 0            ; |random                                                                                                 ;                     ;              ;
+;    |lpm_divide:Mod0|                   ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_55m:auto_generated|  ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated                                                   ; lpm_divide_55m      ; work         ;
+;          |sign_div_unsign_8nh:divider| ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
+;             |alt_u_div_m2f:divider|    ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; all_hex_val[0]                                      ; WideOr4             ; yes                    ;
-; winner_time[0]                                      ; Selector33          ; yes                    ;
-; all_hex_val[1]                                      ; WideOr4             ; yes                    ;
-; winner_time[1]                                      ; Selector33          ; yes                    ;
-; winner_time[2]                                      ; Selector33          ; yes                    ;
-; winner_time[3]                                      ; Selector33          ; yes                    ;
-; winner_time[4]                                      ; Selector33          ; yes                    ;
-; winner_time[5]                                      ; Selector33          ; yes                    ;
-; winner_time[6]                                      ; Selector33          ; yes                    ;
-; winner_time[7]                                      ; Selector33          ; yes                    ;
-; winner_time[8]                                      ; Selector33          ; yes                    ;
-; winner_time[9]                                      ; Selector33          ; yes                    ;
-; winner_time[10]                                     ; Selector33          ; yes                    ;
-; winner_time[11]                                     ; Selector33          ; yes                    ;
-; winner_time[12]                                     ; Selector33          ; yes                    ;
-; winner_time[13]                                     ; Selector33          ; yes                    ;
-; winner_time[14]                                     ; Selector33          ; yes                    ;
-; winner_time[15]                                     ; Selector33          ; yes                    ;
-; winner_time[16]                                     ; Selector33          ; yes                    ;
-; winner_time[17]                                     ; Selector33          ; yes                    ;
-; winner_time[19]                                     ; Selector33          ; yes                    ;
-; winner_time[18]                                     ; Selector33          ; yes                    ;
-; all_hex_val[2]                                      ; WideOr4             ; yes                    ;
-; all_hex_val[3]                                      ; WideOr4             ; yes                    ;
-; player1_cheating                                    ; state.OFF           ; yes                    ;
-; player2_cheating                                    ; state.OFF           ; yes                    ;
-; Number of user-specified and inferred latches = 26  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-----------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                          ;
-+----------------------------------------+------------------------------------+
-; Register name                          ; Reason for Removal                 ;
-+----------------------------------------+------------------------------------+
-; blinkHEX:comb_40|d0[0..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; blinkHEX:comb_40|d1[0..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; blinkHEX:comb_40|d2[0..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; blinkHEX:comb_40|d3[0..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; blinkHEX:comb_40|d4[0..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; blinkHEX:comb_40|d5[1..3]              ; Merged with blinkHEX:comb_40|d5[0] ;
-; Total Number of Removed Registers = 23 ;                                    ;
-+----------------------------------------+------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; random[13]~reg0                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -297,92 +241,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 105   ;
-; Number of registers using Synchronous Clear  ; 46    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 103   ;
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 13    ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 36    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 10:1               ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |lab2|state.TIMER_DISPLAY        ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; Yes        ; |lab2|state.OFF                  ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |lab2|state.RESET                ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |lab2|mux_4to1_case:comb_43|Mux1 ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |lab2|mux_4to1_case:comb_44|Mux0 ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |lab2|mux_4to1_case:comb_45|Mux1 ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |lab2|mux_4to1_case:comb_46|Mux1 ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |lab2|mux_4to1_case:comb_47|Mux0 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |lab2|mux_4to1_case:comb_48|Mux1 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |lab2|player2_win                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; reg_values[6]                          ; 19      ;
+; reg_values[0]                          ; 15      ;
+; reg_values[7]                          ; 4       ;
+; reg_values[8]                          ; 5       ;
+; reg_values[9]                          ; 4       ;
+; reg_values[10]                         ; 5       ;
+; reg_values[11]                         ; 4       ;
+; reg_values[12]                         ; 5       ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |lab2 ;
-+---------------------+-------+----------------------------------------+
-; Parameter Name      ; Value ; Type                                   ;
-+---------------------+-------+----------------------------------------+
-; RESET               ; 000   ; Unsigned Binary                        ;
-; RESUME              ; 001   ; Unsigned Binary                        ;
-; BLINKING            ; 010   ; Unsigned Binary                        ;
-; OFF                 ; 011   ; Unsigned Binary                        ;
-; TIMER_DISPLAY       ; 100   ; Unsigned Binary                        ;
-; WINNER_TIME_DISPLAY ; 101   ; Unsigned Binary                        ;
-; CHEAT               ; 110   ; Unsigned Binary                        ;
-; PRESSED             ; 0     ; Unsigned Binary                        ;
-; RELEASED            ; 1     ; Unsigned Binary                        ;
-; FALSE               ; 0     ; Unsigned Binary                        ;
-; TRUE                ; 1     ; Unsigned Binary                        ;
-+---------------------+-------+----------------------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                ;
+; LPM_WIDTHD             ; 13             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_55m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: clock_divider:comb_36 ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; factor         ; 50000 ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: blinkHEX:comb_40 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; factor         ; 200   ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "random:comb_39"                                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; random    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rnd_ready ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "counter:comb_37"                                                                                                                                                                        ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -390,29 +296,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 105                         ;
-;     CLR               ; 23                          ;
-;     CLR SCLR          ; 44                          ;
-;     ENA CLR           ; 34                          ;
-;     ENA CLR SCLR      ; 2                           ;
-;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 586                         ;
-;     arith             ; 82                          ;
-;         1 data inputs ; 80                          ;
-;         2 data inputs ; 2                           ;
-;     extend            ; 9                           ;
-;         7 data inputs ; 9                           ;
-;     normal            ; 495                         ;
+; arriav_ff             ; 21                          ;
+;     ENA CLR           ; 8                           ;
+;     ENA SLD           ; 13                          ;
+; arriav_lcell_comb     ; 69                          ;
+;     arith             ; 26                          ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 51                          ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 110                         ;
-;         5 data inputs ; 146                         ;
-;         6 data inputs ; 130                         ;
-; boundary_port         ; 57                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 2                           ;
+;     normal            ; 29                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 2                           ;
+;     shared            ; 14                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 2                           ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.00                       ;
-; Average LUT depth     ; 8.19                        ;
+; Max LUT depth         ; 6.10                        ;
+; Average LUT depth     ; 4.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -421,7 +330,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -430,8 +339,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
-    Info: Processing started: Sun Feb 09 16:40:42 2020
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Feb 10 16:22:44 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -443,126 +352,56 @@ Info (12021): Found 1 design units, including 1 entities, in source file blinkhe
     Info (12023): Found entity 1: blinkHEX File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/blinkHEX.v Line: 1
 Info (12021): Found 5 design units, including 5 entities, in source file lab2.v
     Info (12023): Found entity 1: random File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 1
-    Info (12023): Found entity 2: seven_seg_decoder File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
-    Info (12023): Found entity 3: mux_4to1_case File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 82
-    Info (12023): Found entity 4: hex_to_bcd_converter File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 94
-    Info (12023): Found entity 5: lab2 File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 157
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(219): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 219
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(221): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 221
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(223): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 223
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(225): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 225
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(227): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 227
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(233): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 233
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(238): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 238
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(242): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 242
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(243): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 243
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(244): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 244
+    Info (12023): Found entity 2: seven_seg_decoder File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 61
+    Info (12023): Found entity 3: mux_4to1_case File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 89
+    Info (12023): Found entity 4: hex_to_bcd_converter File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 101
+    Info (12023): Found entity 5: lab2 File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 164
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(226): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 226
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(228): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 228
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(230): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 230
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(232): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 232
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(234): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 234
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(240): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 240
 Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(245): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 245
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(246): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 246
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(247): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 247
-Info (12127): Elaborating entity "lab2" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(302): inferring latch(es) for variable "winner_time", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(302): inferring latch(es) for variable "all_hex_val", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(302): inferring latch(es) for variable "player1_cheating", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(302): inferring latch(es) for variable "player2_cheating", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "player2_cheating" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "player1_cheating" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "all_hex_val[0]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "all_hex_val[1]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "all_hex_val[2]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "all_hex_val[3]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[0]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[1]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[2]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[3]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[4]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[5]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[6]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[7]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[8]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[9]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[10]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[11]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[12]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[13]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[14]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[15]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[16]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[17]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[18]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10041): Inferred latch for "winner_time[19]" at lab2.v(302) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-Info (10018): Can't recognize finite state machine "state" because it has a complex reset state
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:comb_36" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 219
-Info (12128): Elaborating entity "counter" for hierarchy "counter:comb_37" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 221
-Warning (10230): Verilog HDL assignment warning at counter.v(15): truncated value with size 32 to match size of target (20) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/counter.v Line: 15
-Info (12128): Elaborating entity "random" for hierarchy "random:comb_39" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 225
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(15): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(15): inferring latch(es) for variable "rnd_ready", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 15
-Info (10041): Inferred latch for "rnd_ready" at lab2.v(24) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 24
-Info (10041): Inferred latch for "enable" at lab2.v(24) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 24
-Info (12128): Elaborating entity "blinkHEX" for hierarchy "blinkHEX:comb_40" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 227
-Warning (10230): Verilog HDL assignment warning at blinkHEX.v(23): truncated value with size 32 to match size of target (12) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/blinkHEX.v Line: 23
-Warning (10230): Verilog HDL assignment warning at blinkHEX.v(33): truncated value with size 32 to match size of target (12) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/blinkHEX.v Line: 33
-Info (12128): Elaborating entity "hex_to_bcd_converter" for hierarchy "hex_to_bcd_converter:comb_41" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 233
-Warning (10036): Verilog HDL or VHDL warning at lab2.v(96): object "hex_number1" assigned a value but never read File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 96
-Warning (10230): Verilog HDL assignment warning at lab2.v(122): truncated value with size 32 to match size of target (4) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 122
-Info (12128): Elaborating entity "mux_4to1_case" for hierarchy "mux_4to1_case:comb_43" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 242
-Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:decoder0" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 250
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch winner_time[0] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[1] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[2] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[3] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[4] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[5] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[6] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[7] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[8] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[9] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[10] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[11] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[12] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[13] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[14] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[15] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[16] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[17] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[19] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13012): Latch winner_time[18] has unsafe behavior File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 302
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMER_DISPLAY File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "state.RESET" is converted into an equivalent circuit using register "state.RESET~_emulated" and latch "state.RESET~1" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
-    Warning (13310): Register "state.RESUME" is converted into an equivalent circuit using register "state.RESUME~_emulated" and latch "state.RESUME~1" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 165
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(249): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 249
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(250): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 250
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(251): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 251
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(252): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 252
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(253): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 253
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(254): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 254
+Info (12127): Elaborating entity "random" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at lab2.v(18): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at lab2.v(18): inferring latch(es) for variable "rnd_ready", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 18
+Info (10041): Inferred latch for "rnd_ready" at lab2.v(27) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 27
+Info (10041): Inferred latch for "enable" at lab2.v(27) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 27
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "13"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_55m.tdf
+    Info (12023): Found entity 1: lpm_divide_55m File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/lpm_divide_55m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/sign_div_unsign_8nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m2f.tdf
+    Info (12023): Found entity 1: alt_u_div_m2f File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/alt_u_div_m2f.tdf Line: 22
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "random[13]" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 35
+    Warning (13410): Pin "rnd_ready" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 652 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 595 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Sun Feb 09 16:41:19 2020
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:00:59
+Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 87 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Mon Feb 10 16:23:09 2020
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:39
 
 
