@@ -216,11 +216,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[2]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{

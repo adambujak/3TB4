@@ -1,10 +1,13 @@
-module random (input clk, reset_n, resume_n, output reg [13:0] random,
-	output reg rnd_ready);
+module random (input clk, reset_n, resume_n, output reg [13:0] random, output reg rnd_ready);
 	//for 14 bits Liner Feedback Shift Register,
 	//the Taps that need to be XNORed are: 14, 5, 3, 1
 	wire xnor_taps, and_allbits, feedback;
+	
 	reg [13:0] reg_values;
 	reg enable=1;
+	
+	assign feedback = reg_values[0] ^ reg_values[2] ^ reg_values[4] ^ reg_values[13];
+	
 	initial
 	begin
 		reg_values=14'b11111111111111;
@@ -25,12 +28,13 @@ module random (input clk, reset_n, resume_n, output reg [13:0] random,
 		begin
 			enable=1;
 			rnd_ready=0;
-			reg_values=reg_values;
+			//reg_values=reg_values;
 		end
 		else
 		begin
 			if (enable)
 			begin
+				
 				reg_values[13]=reg_values[0];
 				reg_values[12:5]=reg_values[13:6];
 				reg_values[4]=reg_values[0] ^ reg_values[5];
@@ -40,12 +44,15 @@ module random (input clk, reset_n, resume_n, output reg [13:0] random,
 				// tap 3 of the diagram from the lab manual
 				reg_values[1]=reg_values[2];
 				reg_values[0]=reg_values[0] ^ reg_values[1];
-				// tap 1 of the diagram from the lab manual
-				random = reg_values + 14'd1000;
-				if (random > 14'd5000)
-				begin
-					random = reg_values % 14'd5000;
-				end
+				//tap 1 of the diagram from the lab manual
+				
+				random = {reg_values[13:1], feedback};
+				
+//				random = reg_values + 14'd1000;
+//				if (random > 14'd5000)
+//				begin
+//					random = reg_values % 14'd5000;
+//				end
 			end //end of ENABLE.
 		end
 	end
@@ -303,7 +310,7 @@ module lab2(input CLOCK_50,  input [3:0] KEY,  output [6:0] HEX0,HEX1,HEX2,HEX3,
 		player1_win=0;
 		player2_win=0;
 		display_counter_start = 0;
-		all_hex_val = 4'b0010;
+		//all_hex_val = 4'b0010;
 		
 		case (state)
 			RESET: 
@@ -345,7 +352,7 @@ module lab2(input CLOCK_50,  input [3:0] KEY,  output [6:0] HEX0,HEX1,HEX2,HEX3,
 					hex_sel=2'b01;
 					
 									
-					if (ms>(random_wait_time-3000)) begin  // ms >  random_time - 3000
+					if (ms>(6000)) begin  // ms >  random_time - 3000
 						display_counter_start=0;
 						next_state=TIMER_DISPLAY;	
 						
@@ -371,6 +378,7 @@ module lab2(input CLOCK_50,  input [3:0] KEY,  output [6:0] HEX0,HEX1,HEX2,HEX3,
 				end
 			TIMER_DISPLAY:
 				begin
+					all_hex_val = 4'b0000;
 					display_counter_start=1;  
 					hex_sel=2'b10;	
 					if ((player1_cheating == TRUE && player2_cheating == TRUE) || (player1_state == PRESSED && player2_state == PRESSED)) // display all 8
