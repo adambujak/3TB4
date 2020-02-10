@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2
-Mon Feb 10 16:23:08 2020
+Mon Feb 10 16:58:58 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -16,10 +16,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Inverted Register Statistics
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +44,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 10 16:23:08 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Feb 10 16:58:58 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lab2                                        ;
 ; Top-level Entity Name           ; random                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 21                                          ;
-; Total pins                      ; 18                                          ;
+; Total registers                 ; 19                                          ;
+; Total pins                      ; 16                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -169,60 +168,49 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; lab2.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v                     ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; db/lpm_divide_55m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/lpm_divide_55m.tdf      ;         ;
-; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/sign_div_unsign_8nh.tdf ;         ;
-; db/alt_u_div_m2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/alt_u_div_m2f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; lab2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                               ;
-+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                       ;
-+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 37                                                                                                                          ;
-;                                             ;                                                                                                                             ;
-; Combinational ALUT usage for logic          ; 69                                                                                                                          ;
-;     -- 7 input functions                    ; 0                                                                                                                           ;
-;     -- 6 input functions                    ; 2                                                                                                                           ;
-;     -- 5 input functions                    ; 8                                                                                                                           ;
-;     -- 4 input functions                    ; 6                                                                                                                           ;
-;     -- <=3 input functions                  ; 53                                                                                                                          ;
-;                                             ;                                                                                                                             ;
-; Dedicated logic registers                   ; 21                                                                                                                          ;
-;                                             ;                                                                                                                             ;
-; I/O pins                                    ; 18                                                                                                                          ;
-;                                             ;                                                                                                                             ;
-; Total DSP Blocks                            ; 0                                                                                                                           ;
-;                                             ;                                                                                                                             ;
-; Maximum fan-out node                        ; lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider|add_sub_12_result_int[13]~1 ;
-; Maximum fan-out                             ; 25                                                                                                                          ;
-; Total fan-out                               ; 324                                                                                                                         ;
-; Average fan-out                             ; 2.57                                                                                                                        ;
-+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 10        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 14        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 13        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 19        ;
+;                                             ;           ;
+; I/O pins                                    ; 16        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 19        ;
+; Total fan-out                               ; 120       ;
+; Average fan-out                             ; 1.85      ;
++---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Entity Name         ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |random                                ; 69 (18)             ; 21 (21)                   ; 0                 ; 0          ; 18   ; 0            ; |random                                                                                                 ;                     ;              ;
-;    |lpm_divide:Mod0|                   ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;       |lpm_divide_55m:auto_generated|  ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated                                                   ; lpm_divide_55m      ; work         ;
-;          |sign_div_unsign_8nh:divider| ; 51 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
-;             |alt_u_div_m2f:divider|    ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |random|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f       ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |random                    ; 14 (14)             ; 19 (19)                   ; 0                 ; 0          ; 16   ; 0            ; |random             ;             ;              ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,8 +219,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; random[13]~reg0                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
+; reg_values[11]                        ; Merged with reg_values[10]             ;
+; random[4]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -241,12 +230,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 13    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -256,39 +245,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; reg_values[6]                          ; 19      ;
-; reg_values[0]                          ; 15      ;
-; reg_values[7]                          ; 4       ;
-; reg_values[8]                          ; 5       ;
-; reg_values[9]                          ; 4       ;
-; reg_values[10]                         ; 5       ;
-; reg_values[11]                         ; 4       ;
-; reg_values[12]                         ; 5       ;
+; reg_values[10]                         ; 3       ;
+; reg_values[4]                          ; 1       ;
+; reg_values[2]                          ; 1       ;
+; reg_values[0]                          ; 7       ;
+; reg_values[6]                          ; 7       ;
+; reg_values[7]                          ; 2       ;
+; reg_values[8]                          ; 2       ;
+; reg_values[9]                          ; 2       ;
 ; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                ;
-; LPM_WIDTHD             ; 13             ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_55m ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -296,32 +262,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
-;     ENA CLR           ; 8                           ;
-;     ENA SLD           ; 13                          ;
-; arriav_lcell_comb     ; 69                          ;
-;     arith             ; 26                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 2                           ;
-;     normal            ; 29                          ;
+; arriav_ff             ; 19                          ;
+;     CLR               ; 1                           ;
+;     ENA               ; 11                          ;
+;     ENA CLR           ; 7                           ;
+; arriav_lcell_comb     ; 15                          ;
+;     arith             ; 8                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 7                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 4                           ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 2                           ;
-;     shared            ; 14                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 2                           ;
-; boundary_port         ; 18                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+; boundary_port         ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.10                        ;
-; Average LUT depth     ; 4.36                        ;
+; Max LUT depth         ; 1.70                        ;
+; Average LUT depth     ; 0.94                        ;
 +-----------------------+-----------------------------+
 
 
@@ -330,7 +288,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -340,7 +298,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Feb 10 16:22:44 2020
+    Info: Processing started: Mon Feb 10 16:58:35 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -351,57 +309,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
 Info (12021): Found 1 design units, including 1 entities, in source file blinkhex.v
     Info (12023): Found entity 1: blinkHEX File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/blinkHEX.v Line: 1
 Info (12021): Found 5 design units, including 5 entities, in source file lab2.v
-    Info (12023): Found entity 1: random File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 1
-    Info (12023): Found entity 2: seven_seg_decoder File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 61
-    Info (12023): Found entity 3: mux_4to1_case File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 89
-    Info (12023): Found entity 4: hex_to_bcd_converter File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 101
-    Info (12023): Found entity 5: lab2 File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 164
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(226): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 226
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(228): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 228
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(230): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 230
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(232): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 232
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(234): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 234
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(240): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 240
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(245): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 245
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(249): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 249
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(250): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 250
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(251): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 251
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(252): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 252
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(253): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 253
-Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(254): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 254
+    Info (12023): Found entity 1: random File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 61
+    Info (12023): Found entity 2: seven_seg_decoder File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 117
+    Info (12023): Found entity 3: mux_4to1_case File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 145
+    Info (12023): Found entity 4: hex_to_bcd_converter File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 157
+    Info (12023): Found entity 5: lab2 File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 220
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(282): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 282
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(284): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 284
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(286): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 286
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(288): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 288
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(290): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 290
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(296): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 296
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(301): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 301
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(305): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 305
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(306): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 306
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(307): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 307
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(308): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 308
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(309): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 309
+Critical Warning (10846): Verilog HDL Instantiation warning at lab2.v(310): instance has no name File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 310
 Info (12127): Elaborating entity "random" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(18): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at lab2.v(18): inferring latch(es) for variable "rnd_ready", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 18
-Info (10041): Inferred latch for "rnd_ready" at lab2.v(27) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 27
-Info (10041): Inferred latch for "enable" at lab2.v(27) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 27
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 54
-    Info (12134): Parameter "LPM_WIDTHN" = "14"
-    Info (12134): Parameter "LPM_WIDTHD" = "13"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_55m.tdf
-    Info (12023): Found entity 1: lpm_divide_55m File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/lpm_divide_55m.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/sign_div_unsign_8nh.tdf Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m2f.tdf
-    Info (12023): Found entity 1: alt_u_div_m2f File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/db/alt_u_div_m2f.tdf Line: 22
+Warning (10240): Verilog HDL Always Construct warning at lab2.v(78): inferring latch(es) for variable "enable", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 78
+Warning (10240): Verilog HDL Always Construct warning at lab2.v(78): inferring latch(es) for variable "rnd_ready", which holds its previous value in one or more paths through the always construct File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 78
+Info (10041): Inferred latch for "rnd_ready" at lab2.v(87) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 87
+Info (10041): Inferred latch for "enable" at lab2.v(87) File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 87
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "random[13]" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 35
-    Warning (13410): Pin "rnd_ready" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 1
+    Warning (13410): Pin "random[4]" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 95
+    Warning (13410): Pin "rnd_ready" is stuck at GND File: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/lab2.v Line: 61
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 87 logic cells
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 22 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Mon Feb 10 16:23:09 2020
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Mon Feb 10 16:58:58 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:44
 
 

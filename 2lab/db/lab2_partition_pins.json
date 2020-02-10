@@ -20,10 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "random[4]",
-					"strict" : false
-				},
-				{
 					"name" : "random[5]",
 					"strict" : false
 				},
@@ -49,10 +45,6 @@
 				},
 				{
 					"name" : "random[11]",
-					"strict" : false
-				},
-				{
-					"name" : "random[12]",
 					"strict" : false
 				},
 				{
