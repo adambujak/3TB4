@@ -1,5 +1,5 @@
 Assembler report for lab2
-Sun Feb 09 03:38:47 2020
+Mon Feb 10 17:20:55 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Adam/Projects/Verilog/3tb4/lab2/output_files/lab2.sof
+  5. Assembler Device Options: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/output_files/lab2.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Feb 09 03:38:47 2020 ;
+; Assembler Status      ; Successful - Mon Feb 10 17:20:55 2020 ;
 ; Revision Name         ; lab2                                  ;
-; Top-level Entity Name ; lab2                                  ;
+; Top-level Entity Name ; random                                ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSEMA5F31C6                          ;
 +-----------------------+---------------------------------------+
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------+
-; Assembler Generated Files                                      ;
-+----------------------------------------------------------------+
-; File Name                                                      ;
-+----------------------------------------------------------------+
-; C:/Users/Adam/Projects/Verilog/3tb4/lab2/output_files/lab2.sof ;
-+----------------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Assembler Generated Files                                               ;
++-------------------------------------------------------------------------+
+; File Name                                                               ;
++-------------------------------------------------------------------------+
+; C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/output_files/lab2.sof ;
++-------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Adam/Projects/Verilog/3tb4/lab2/output_files/lab2.sof ;
-+----------------+-------------------------------------------------------------------------+
-; Option         ; Setting                                                                 ;
-+----------------+-------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00AF6536                                                              ;
-; Checksum       ; 0x00AF6536                                                              ;
-+----------------+-------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Laura/McMaster 3/MECHTRON 3TB4/3TB4/2lab/output_files/lab2.sof ;
++----------------+----------------------------------------------------------------------------------+
+; Option         ; Setting                                                                          ;
++----------------+----------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00AF97B8                                                                       ;
+; Checksum       ; 0x00AF97B8                                                                       ;
++----------------+----------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Feb 09 03:38:40 2020
+    Info: Processing started: Mon Feb 10 17:20:44 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lab2 -c lab2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Sun Feb 09 03:38:47 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Mon Feb 10 17:20:55 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 

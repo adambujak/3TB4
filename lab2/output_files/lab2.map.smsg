@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at lab2.v(9): always construct contains both blocking and non-blocking assignments File: C:/Users/Adam/Projects/Verilog/3tb4/lab2/lab2.v Line: 9
+Info (10281): Verilog HDL Declaration information at lab2.v(134): object "WIN1" differs only in case from object "win1" in the same scope File: C:/Users/Adam/Programming/3tb4/2lab/lab2.v Line: 134
+Info (10281): Verilog HDL Declaration information at lab2.v(134): object "WIN2" differs only in case from object "win2" in the same scope File: C:/Users/Adam/Programming/3tb4/2lab/lab2.v Line: 134
