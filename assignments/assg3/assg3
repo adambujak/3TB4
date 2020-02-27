@@ -1,0 +1,27 @@
+module question3 (x, y, z, w);
+
+input  signed   [0:-7] x;
+input  signed   [1:-6] y;
+input  unsigned [-1:-8] z;
+output signed   [3:-9] w;
+
+wire   signed   [2:-13] XtimesY;
+assign XtimesY = x*y;
+
+wire   signed   [1:14] YtimesZ;
+assign YtimesZ = y*z;
+
+wire [2:-8] xy;
+assign xy = {XtimesY[2:-8]};
+wire [2:-8] yz;
+assign yz = {{YtimesZ[1]}, YtimesZ[1:-8]};
+
+wire [2:-8] xFinal;
+wire [2:-8] yFinal;
+wire [2:-8] zFinal;
+assign xFinal = {{x[0]}, {x[0]}, x, 1`b0};
+assign yFinal = {{y[0]}, {y[0]}, 1`b0, 1`b0};
+assign zFinal = {1`b0, 1`b0, 1`b0, z};
+
+assign w = xy + yz + xFinal, yFinal, zFinal;
+endmodule
