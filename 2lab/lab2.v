@@ -58,19 +58,19 @@
 //	end
 //endmodule
 
-module random (input clk, reset_n, resume_n, output reg [11:0] random, output reg rnd_ready);
+module random (input clk, reset_n, resume_n, output reg [13:0] random, output reg rnd_ready);
 	//for 14 bits Liner Feedback Shift Register,
 	//the Taps that need to be XNORed are: 14, 5, 3, 1
 	wire xnor_taps, and_allbits, feedback;
 	
-	reg [11:0] reg_values;
+	reg [13:0] reg_values;
 	reg enable=1;
 	
-	assign feedback = reg_values[0] ^ reg_values[2] ^ reg_values[4] ^ reg_values[11];
+	assign feedback = reg_values[0] ^ reg_values[2] ^ reg_values[4] ^ reg_values[13];
 	
 	initial
 	begin
-		reg_values=12'b111111111111;
+		reg_values=14'b11111111111111;
 		//the LFSR cannot be all 0 at beginning.
 		enable=1;
 		rnd_ready=0;
@@ -79,7 +79,7 @@ module random (input clk, reset_n, resume_n, output reg [11:0] random, output re
 	begin
 		if (!reset_n)
 		begin
-			reg_values=12'b111111111111;
+			reg_values=14'b11111111111111;
 			//the LFSR cannot be all 0 at beginning.
 			enable=1;
 			rnd_ready=0;
@@ -95,8 +95,8 @@ module random (input clk, reset_n, resume_n, output reg [11:0] random, output re
 			if (enable)
 			begin
 				
-				reg_values[11]=reg_values[0];
-				reg_values[10:5]=reg_values[11:6];
+				reg_values[13]=reg_values[0];
+				reg_values[12:5]=reg_values[13:6];
 				reg_values[4]=reg_values[0] ^ reg_values[5];
 				// tap 5 of the diagram from the lab manual
 				reg_values[3]=reg_values[4];
@@ -106,7 +106,24 @@ module random (input clk, reset_n, resume_n, output reg [11:0] random, output re
 				reg_values[0]=reg_values[0] ^ reg_values[1];
 				//tap 1 of the diagram from the lab manual
 				
-				random = {reg_values[11:1], feedback} + 12'd2000; //can change 200 accordingly
+//				reg_values[11]=reg_values[0];
+//				reg_values[10:5]=reg_values[11:6];
+//				reg_values[4]=reg_values[0] ^ reg_values[5];
+//				// tap 5 of the diagram from the lab manual
+//				reg_values[3]=reg_values[4];
+//				reg_values[2]=reg_values[0] ^ reg_values[3];
+//				// tap 3 of the diagram from the lab manual
+//				reg_values[1]=reg_values[2];
+//				reg_values[0]=reg_values[0] ^ reg_values[1];
+//				//tap 1 of the diagram from the lab manual
+				
+				random = {reg_values[13:1], feedback} + 12'd2000; //can change 200 accordingly
+				
+				random = random + 14'd1000;
+				if (random > 14'd5000)
+				begin
+					random = reg_values % 14'd5000;
+				end
 				
 			end //end of ENABLE.
 		end
@@ -409,7 +426,7 @@ module lab2(input CLOCK_50,  input [3:0] KEY,  output [6:0] HEX0,HEX1,HEX2,HEX3,
 									
 					if (ms>(6000)) begin  // ms >  random_time - 3000
 						display_counter_start=0;
-						next_state=TIMER_DISPLAY;	
+						next_state=TIMER_DISPLAY;
 						
 					end
 					if (player1_state == PRESSED)
