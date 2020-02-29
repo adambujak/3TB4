@@ -18,30 +18,28 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/09/2020 03:39:32"
+// Generated on "02/10/2020 17:21:25"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          lab2
+// Verilog Test Bench (with test vectors) for design :                          random
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module lab2_vlg_vec_tst();
+module random_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
 reg reset_n;
 reg resume_n;
 // wires                                               
-wire enable;
-wire [13:0] random;
+wire [11:0] random;
 wire rnd_ready;
 
 // assign statements (if any)                          
-lab2 i1 (
+random i1 (
 // port map - connection between master ports and signals/registers   
 	.clk(clk),
-	.enable(enable),
 	.random(random),
 	.reset_n(reset_n),
 	.resume_n(resume_n),
@@ -49,15 +47,15 @@ lab2 i1 (
 );
 initial 
 begin 
-#3000000 $finish;
+#100000000 $finish;
 end 
 
-// reset_n
-initial
+// clk
+always
 begin
-	reset_n = 1'b1;
-	reset_n = #40000 1'b0;
-	reset_n = #40000 1'b1;
+	clk = 1'b0;
+	clk = #2500000 1'b1;
+	#2500000;
 end 
 
 // resume_n
@@ -66,12 +64,10 @@ begin
 	resume_n = 1'b1;
 end 
 
-// clk
-always
+// reset_n
+initial
 begin
-	clk = 1'b0;
-	clk = #5000 1'b1;
-	#5000;
+	reset_n = 1'b1;
 end 
 endmodule
 
