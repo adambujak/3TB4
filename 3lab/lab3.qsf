@@ -888,3 +888,4 @@ set_global_assignment -name VERILOG_FILE i2c.v
 set_global_assignment -name VERILOG_FILE dsp_subsystem.v
 set_global_assignment -name VERILOG_FILE CLOCK_500.v
 set_global_assignment -name VERILOG_FILE lab3.v
+set_global_assignment -name QIP_FILE multiplier.qip
