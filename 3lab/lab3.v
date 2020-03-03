@@ -10,7 +10,7 @@
 // as good examples of how hardware should be designed using Verilog
 // Also note that the fact that most wire names are capitalized has NO special meaning.
 
-module 3lab(
+module lab3(
 	KEY,
 	AUD_ADCDAT,
 	AUD_BCLK,
