@@ -1,0 +1,181 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "br",
+					"strict" : false
+				},
+				{
+					"name" : "brz",
+					"strict" : false
+				},
+				{
+					"name" : "addi",
+					"strict" : false
+				},
+				{
+					"name" : "subi",
+					"strict" : false
+				},
+				{
+					"name" : "sr0",
+					"strict" : false
+				},
+				{
+					"name" : "srh0",
+					"strict" : false
+				},
+				{
+					"name" : "clr",
+					"strict" : false
+				},
+				{
+					"name" : "mov",
+					"strict" : false
+				},
+				{
+					"name" : "mova",
+					"strict" : false
+				},
+				{
+					"name" : "movr",
+					"strict" : false
+				},
+				{
+					"name" : "movrhs",
+					"strict" : false
+				},
+				{
+					"name" : "pause",
+					"strict" : false
+				},
+				{
+					"name" : "delay_done",
+					"strict" : false
+				},
+				{
+					"name" : "temp_is_positive",
+					"strict" : false
+				},
+				{
+					"name" : "temp_is_negative",
+					"strict" : false
+				},
+				{
+					"name" : "temp_is_zero",
+					"strict" : false
+				},
+				{
+					"name" : "register0_is_zero",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_signals[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_signals[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_signals[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepper_signals[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "start_delay_counter",
+					"strict" : false
+				},
+				{
+					"name" : "enable_delay_counter",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "load_temp",
+					"strict" : false
+				},
+				{
+					"name" : "increment_temp",
+					"strict" : false
+				},
+				{
+					"name" : "decrement_temp",
+					"strict" : false
+				},
+				{
+					"name" : "write_reg_file",
+					"strict" : false
+				},
+				{
+					"name" : "increment_pc",
+					"strict" : false
+				},
+				{
+					"name" : "commit_branch",
+					"strict" : false
+				},
+				{
+					"name" : "result_mux_select",
+					"strict" : false
+				},
+				{
+					"name" : "select_write_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "select_write_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_set_low",
+					"strict" : false
+				},
+				{
+					"name" : "alu_set_high",
+					"strict" : false
+				},
+				{
+					"name" : "op2_mux_select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op2_mux_select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op1_mux_select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op1_mux_select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_add_sub",
+					"strict" : false
+				},
+				{
+					"name" : "select_immediate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "select_immediate[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
