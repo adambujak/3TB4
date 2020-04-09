@@ -1,0 +1,162 @@
+$comment
+	File created using the following command:
+		vcd file lab5.msim.vcd -direction
+$end
+$date
+	Thu Apr 09 08:22:17 2020
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module lab5_vlg_vec_tst $end
+$var reg 1 ! addi $end
+$var reg 1 " br $end
+$var reg 1 # brz $end
+$var reg 1 $ clr $end
+$var reg 1 % mov $end
+$var reg 1 & mova $end
+$var reg 1 ' movr $end
+$var reg 1 ( movrhs $end
+$var reg 1 ) pause $end
+$var reg 1 * sr0 $end
+$var reg 1 + srh0 $end
+$var reg 1 , subi $end
+$var wire 1 - alu_add_sub $end
+$var wire 1 . alu_set_high $end
+$var wire 1 / alu_set_low $end
+$var wire 1 0 commit_branch $end
+$var wire 1 1 decrement_temp $end
+$var wire 1 2 enable_delay_counter $end
+$var wire 1 3 increment_pc $end
+$var wire 1 4 increment_temp $end
+$var wire 1 5 load_temp $end
+$var wire 1 6 op1_mux_select [1] $end
+$var wire 1 7 op1_mux_select [0] $end
+$var wire 1 8 op2_mux_select [1] $end
+$var wire 1 9 op2_mux_select [0] $end
+$var wire 1 : result_mux_select $end
+$var wire 1 ; select_immediate [1] $end
+$var wire 1 < select_immediate [0] $end
+$var wire 1 = select_write_address [1] $end
+$var wire 1 > select_write_address [0] $end
+$var wire 1 ? start_delay_counter $end
+$var wire 1 @ write_reg_file $end
+
+$scope module i1 $end
+$var wire 1 A gnd $end
+$var wire 1 B vcc $end
+$var wire 1 C unknown $end
+$var tri1 1 D devclrn $end
+$var tri1 1 E devpor $end
+$var tri1 1 F devoe $end
+$var wire 1 G brz~input_o $end
+$var wire 1 H addi~input_o $end
+$var wire 1 I subi~input_o $end
+$var wire 1 J sr0~input_o $end
+$var wire 1 K srh0~input_o $end
+$var wire 1 L clr~input_o $end
+$var wire 1 M mov~input_o $end
+$var wire 1 N mova~input_o $end
+$var wire 1 O movr~input_o $end
+$var wire 1 P movrhs~input_o $end
+$var wire 1 Q pause~input_o $end
+$var wire 1 R ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 S br~input_o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+05
+07
+06
+09
+08
+0:
+0<
+0;
+0>
+0=
+0?
+0@
+0A
+1B
+xC
+1D
+1E
+1F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+$end
+#100000
+1"
+1S
+1/
+#200000
+0"
+0S
+0/
+#300000
+1"
+1S
+1/
+#400000
+0"
+0S
+0/
+#500000
+1"
+1S
+1/
+#600000
+0"
+0S
+0/
+#700000
+1"
+1S
+1/
+#800000
+0"
+0S
+0/
+#900000
+1"
+1S
+1/
+#1000000

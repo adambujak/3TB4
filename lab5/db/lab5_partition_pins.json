@@ -1,0 +1,17 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alu_set_low",
+					"strict" : false
+				},
+				{
+					"name" : "br",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+|lab5
+br => alu_set_low.DATAIN
+brz => ~NO_FANOUT~
+addi => ~NO_FANOUT~
+subi => ~NO_FANOUT~
+sr0 => ~NO_FANOUT~
+srh0 => ~NO_FANOUT~
+clr => ~NO_FANOUT~
+mov => ~NO_FANOUT~
+mova => ~NO_FANOUT~
+movr => ~NO_FANOUT~
+movrhs => ~NO_FANOUT~
+pause => ~NO_FANOUT~
+commit_branch <= <GND>
+increment_pc <= <GND>
+write_reg_file <= <GND>
+start_delay_counter <= <GND>
+enable_delay_counter <= <GND>
+load_temp <= <GND>
+increment_temp <= <GND>
+decrement_temp <= <GND>
+alu_set_low <= br.DB_MAX_OUTPUT_PORT_TYPE
+alu_set_high <= <GND>
+alu_add_sub <= <GND>
+result_mux_select <= <GND>
+select_immediate[0] <= <GND>
+select_immediate[1] <= <GND>
+select_write_address[0] <= <GND>
+select_write_address[1] <= <GND>
+op1_mux_select[0] <= <GND>
+op1_mux_select[1] <= <GND>
+op2_mux_select[0] <= <GND>
+op2_mux_select[1] <= <GND>
+
+
