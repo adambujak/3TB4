@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Thu Apr 09 08:16:15 2020
+Thu Apr 09 09:20:59 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,14 +43,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 09 08:16:15 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 09 09:20:59 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lab5                                        ;
 ; Top-level Entity Name           ; lab5                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 32                                          ;
+; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -158,10 +159,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,31 +176,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 32    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; brz   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 33    ;
-; Average fan-out                             ; 0.52  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 24                  ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 44                  ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 4                   ;
+;     -- 5 input functions                    ; 12                  ;
+;     -- 4 input functions                    ; 7                   ;
+;     -- <=3 input functions                  ; 21                  ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 37                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; movhrs_stage.00_385 ;
+; Maximum fan-out                             ; 13                  ;
+; Total fan-out                               ; 225                 ;
+; Average fan-out                             ; 1.91                ;
++---------------------------------------------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,9 +208,26 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |lab5                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 32   ; 0            ; |lab5               ; lab5        ; work         ;
+; |lab5                      ; 44 (44)             ; 0 (0)                     ; 0                 ; 0          ; 37   ; 0            ; |lab5               ; lab5        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; movr_stage.00_346                                  ; movr_stage.10       ; yes                    ;
+; movhrs_stage.00_385                                ; movhrs_stage.10     ; yes                    ;
+; pause_delay                                        ; pause_delay         ; yes                    ;
+; movr_stage.01_333                                  ; movr_stage.10       ; yes                    ;
+; movhrs_stage.01_372                                ; movhrs_stage.10     ; yes                    ;
+; movr_stage.10_320                                  ; movr_stage.10       ; yes                    ;
+; movhrs_stage.10_359                                ; movhrs_stage.10     ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -231,13 +250,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 32                          ;
+; arriav_lcell_comb     ; 45                          ;
+;     normal            ; 45                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 7                           ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 37                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -256,54 +280,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Apr 09 08:15:54 2020
+    Info: Processing started: Thu Apr 09 09:20:41 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lab5.v
-    Info (12023): Found entity 1: lab5 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 3
+    Info (12023): Found entity 1: lab5 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 1
 Info (12127): Elaborating entity "lab5" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "commit_branch" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 18
-    Warning (13410): Pin "increment_pc" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 19
-    Warning (13410): Pin "write_reg_file" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 20
-    Warning (13410): Pin "start_delay_counter" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 21
-    Warning (13410): Pin "enable_delay_counter" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 22
-    Warning (13410): Pin "load_temp" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 23
-    Warning (13410): Pin "increment_temp" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 24
-    Warning (13410): Pin "decrement_temp" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 25
-    Warning (13410): Pin "alu_set_high" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 27
-    Warning (13410): Pin "alu_add_sub" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 28
-    Warning (13410): Pin "result_mux_select" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 29
-    Warning (13410): Pin "select_immediate[0]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 31
-    Warning (13410): Pin "select_immediate[1]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 31
-    Warning (13410): Pin "select_write_address[0]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 32
-    Warning (13410): Pin "select_write_address[1]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 32
-    Warning (13410): Pin "op1_mux_select[0]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 33
-    Warning (13410): Pin "op1_mux_select[1]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 33
-    Warning (13410): Pin "op2_mux_select[0]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 35
-    Warning (13410): Pin "op2_mux_select[1]" is stuck at GND File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 35
+Warning (10230): Verilog HDL assignment warning at lab5.v(92): truncated value with size 2 to match size of target (1) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 92
+Warning (10230): Verilog HDL assignment warning at lab5.v(97): truncated value with size 2 to match size of target (1) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at lab5.v(85): inferring latch(es) for variable "pause_delay", which holds its previous value in one or more paths through the always construct File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at lab5.v(85): inferring latch(es) for variable "movhrs_stage", which holds its previous value in one or more paths through the always construct File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 85
+Warning (10240): Verilog HDL Always Construct warning at lab5.v(85): inferring latch(es) for variable "movr_stage", which holds its previous value in one or more paths through the always construct File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 85
+Info (10041): Inferred latch for "movr_stage.10" at lab5.v(272) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Info (10041): Inferred latch for "movr_stage.01" at lab5.v(272) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Info (10041): Inferred latch for "movr_stage.00" at lab5.v(272) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Info (10041): Inferred latch for "movhrs_stage.10" at lab5.v(223) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Info (10041): Inferred latch for "movhrs_stage.01" at lab5.v(223) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Info (10041): Inferred latch for "movhrs_stage.00" at lab5.v(223) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Info (10041): Inferred latch for "pause_delay" at lab5.v(206) File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 206
+Warning (13012): Latch movr_stage.00_346 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movr_stage.01_333 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Warning (13012): Latch movhrs_stage.00_385 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movhrs_stage.01_372 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Warning (13012): Latch pause_delay has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 40
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pause File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 14
+Warning (13012): Latch movr_stage.01_333 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movr_stage.00_346 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Warning (13012): Latch movhrs_stage.01_372 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movhrs_stage.00_385 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Warning (13012): Latch movr_stage.10_320 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movr_stage.01_333 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 272
+Warning (13012): Latch movhrs_stage.10_359 has unsafe behavior File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal movhrs_stage.01_372 File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 223
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "brz" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 6
-    Warning (15610): No output dependent on input pin "addi" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 7
-    Warning (15610): No output dependent on input pin "subi" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 8
-    Warning (15610): No output dependent on input pin "sr0" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 9
-    Warning (15610): No output dependent on input pin "srh0" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 10
-    Warning (15610): No output dependent on input pin "clr" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 11
-    Warning (15610): No output dependent on input pin "mov" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 12
-    Warning (15610): No output dependent on input pin "mova" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 13
-    Warning (15610): No output dependent on input pin "movr" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 14
-    Warning (15610): No output dependent on input pin "movrhs" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 15
-    Warning (15610): No output dependent on input pin "pause" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 16
-Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "mova" File: C:/Users/Adam/Workspace/3TB4/lab5/lab5.v Line: 11
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
     Info (21059): Implemented 20 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Thu Apr 09 08:16:15 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:48
+    Info (21061): Implemented 44 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4833 megabytes
+    Info: Processing ended: Thu Apr 09 09:20:59 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:42
 
 

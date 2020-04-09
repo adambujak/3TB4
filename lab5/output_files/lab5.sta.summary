@@ -2,4 +2,148 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'delay_done'
+Slack : -7.199
+TNS   : -7.199
+
+Type  : Slow 1100mV 85C Model Setup 'movr'
+Slack : -1.653
+TNS   : -4.495
+
+Type  : Slow 1100mV 85C Model Setup 'movrhs'
+Slack : -1.551
+TNS   : -4.364
+
+Type  : Slow 1100mV 85C Model Hold 'movr'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'movrhs'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'delay_done'
+Slack : 2.652
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'movrhs'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'movr'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'delay_done'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'delay_done'
+Slack : -6.917
+TNS   : -6.917
+
+Type  : Slow 1100mV 0C Model Setup 'movr'
+Slack : -1.745
+TNS   : -4.664
+
+Type  : Slow 1100mV 0C Model Setup 'movrhs'
+Slack : -1.498
+TNS   : -4.382
+
+Type  : Slow 1100mV 0C Model Hold 'movr'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'movrhs'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'delay_done'
+Slack : 2.253
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'movrhs'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'movr'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'delay_done'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'delay_done'
+Slack : -4.502
+TNS   : -4.502
+
+Type  : Fast 1100mV 85C Model Setup 'movrhs'
+Slack : -0.500
+TNS   : -1.151
+
+Type  : Fast 1100mV 85C Model Setup 'movr'
+Slack : -0.419
+TNS   : -1.053
+
+Type  : Fast 1100mV 85C Model Hold 'movr'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'movrhs'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'delay_done'
+Slack : 1.745
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'movrhs'
+Slack : -0.050
+TNS   : -0.207
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'movr'
+Slack : -0.039
+TNS   : -0.076
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'delay_done'
+Slack : 0.011
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'delay_done'
+Slack : -3.786
+TNS   : -3.786
+
+Type  : Fast 1100mV 0C Model Setup 'movrhs'
+Slack : -0.374
+TNS   : -0.875
+
+Type  : Fast 1100mV 0C Model Setup 'movr'
+Slack : -0.345
+TNS   : -0.836
+
+Type  : Fast 1100mV 0C Model Hold 'movr'
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'movrhs'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'delay_done'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'movrhs'
+Slack : -0.046
+TNS   : -0.206
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'movr'
+Slack : -0.042
+TNS   : -0.082
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'delay_done'
+Slack : 0.014
+TNS   : 0.000
+
 ------------------------------------------------------------

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/09/2020 08:22:06"
+// Generated on "04/09/2020 09:25:06"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          lab5
 // 
@@ -33,14 +33,19 @@ reg addi;
 reg br;
 reg brz;
 reg clr;
+reg delay_done;
 reg mov;
 reg mova;
 reg movr;
 reg movrhs;
 reg pause;
+reg register_is_zero;
 reg sr0;
 reg srh0;
 reg subi;
+reg temp_is_negative;
+reg temp_is_positive;
+reg temp_is_zero;
 // wires                                               
 wire alu_add_sub;
 wire alu_set_high;
@@ -71,6 +76,7 @@ lab5 i1 (
 	.clr(clr),
 	.commit_branch(commit_branch),
 	.decrement_temp(decrement_temp),
+	.delay_done(delay_done),
 	.enable_delay_counter(enable_delay_counter),
 	.increment_pc(increment_pc),
 	.increment_temp(increment_temp),
@@ -82,6 +88,7 @@ lab5 i1 (
 	.op1_mux_select(op1_mux_select),
 	.op2_mux_select(op2_mux_select),
 	.pause(pause),
+	.register_is_zero(register_is_zero),
 	.result_mux_select(result_mux_select),
 	.select_immediate(select_immediate),
 	.select_write_address(select_write_address),
@@ -89,6 +96,9 @@ lab5 i1 (
 	.srh0(srh0),
 	.start_delay_counter(start_delay_counter),
 	.subi(subi),
+	.temp_is_negative(temp_is_negative),
+	.temp_is_positive(temp_is_positive),
+	.temp_is_zero(temp_is_zero),
 	.write_reg_file(write_reg_file)
 );
 initial 
@@ -103,11 +113,11 @@ begin
 end 
 
 // br
-always
+initial
 begin
 	br = 1'b0;
-	br = #100000 1'b1;
-	#100000;
+	br = #20000 1'b1;
+	br = #160000 1'b0;
 end 
 
 // brz
@@ -120,12 +130,16 @@ end
 initial
 begin
 	clr = 1'b0;
+	clr = #220000 1'b1;
+	clr = #90000 1'b0;
 end 
 
 // mov
 initial
 begin
 	mov = 1'b0;
+	mov = #390000 1'b1;
+	mov = #80000 1'b0;
 end 
 
 // mova

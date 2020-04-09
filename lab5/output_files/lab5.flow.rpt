@@ -1,5 +1,5 @@
 Flow report for lab5
-Thu Apr 09 08:22:09 2020
+Thu Apr 09 09:25:10 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 09 08:22:09 2020       ;
+; Flow Status                     ; Successful - Thu Apr 09 09:25:09 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lab5                                        ;
 ; Top-level Entity Name           ; lab5                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                        ;
+; Logic utilization (in ALMs)     ; 25 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 32 / 457 ( 7 % )                            ;
+; Total pins                      ; 37 / 457 ( 8 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/09/2020 08:15:55 ;
+; Start date & time ; 04/09/2020 09:20:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab5                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273184154297596.158643455506664        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273184154297596.158643844115220        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -95,13 +95,13 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:20     ; 1.0                     ; 4787 MB             ; 00:00:47                           ;
-; Fitter                    ; 00:00:58     ; 1.0                     ; 6544 MB             ; 00:01:35                           ;
-; Assembler                 ; 00:00:18     ; 1.0                     ; 4835 MB             ; 00:00:13                           ;
-; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 5104 MB             ; 00:00:09                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4715 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 4833 MB             ; 00:00:41                           ;
+; Fitter                    ; 00:00:58     ; 1.0                     ; 6599 MB             ; 00:01:42                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 4834 MB             ; 00:00:12                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 5131 MB             ; 00:00:10                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4713 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4722 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:51     ; --                      ; --                  ; 00:02:48                           ;
+; Total                     ; 00:01:42     ; --                      ; --                  ; 00:02:49                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

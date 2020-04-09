@@ -1,5 +1,3 @@
-
-
 module lab5 (
 input wire
         br,
@@ -85,19 +83,19 @@ output wire [1:0]
     begin
 
         if ( pause_delay == 1'b0 )
-        {
+        begin
             pause_delay = 1'b0;
-        }
+        end
 
         if ( movhrs_stage == 2'b00 )
-        {
+        begin
             pause_delay = 2'b00;
-        }
-
+        end
+		  
         if ( movr_stage == 2'b00 )
-        {
+        begin
             pause_delay = 2'b00;
-        }
+        end
 
         commit_branch_reg = 1'b0;
         increment_pc_reg = 1'b0; 
@@ -140,7 +138,7 @@ output wire [1:0]
             end
             else
             begin 
-                increment_pc = 1'b1;
+                increment_pc_reg = 1'b1;
             end
         end
 
@@ -227,8 +225,8 @@ output wire [1:0]
 
             if ( movhrs_stage == 2'b00 )
             begin
-                load_temp_reg = 1’b1;
-                movhrs_stage_2 = 1'b1;
+                load_temp_reg = 1'b1;
+                movhrs_stage = 1'b1;
             end
 
             else if ( movhrs_stage == 2'b01 )
@@ -236,7 +234,7 @@ output wire [1:0]
                 if (temp_is_zero)
                 begin
                     increment_pc_reg = 1'b1;
-                    movhrs_stage == 2'b10;
+                    movhrs_stage = 2'b10;
                 end
                 else
                 begin 
@@ -265,10 +263,10 @@ output wire [1:0]
             end
 
             else if ( movhrs_stage == 2'b10 )
-            {
+            begin
                 enable_delay_counter_reg = 1'b1;
                 movhrs_stage = 2'b00;
-            }
+            end
         end
 
         if ( movr )
@@ -276,7 +274,7 @@ output wire [1:0]
 
             if ( movr_stage == 2'b00 )
             begin
-                load_temp_reg = 1’b1;
+                load_temp_reg = 1'b1;
                 movr_stage = 2'b01;
             end
 
@@ -285,7 +283,7 @@ output wire [1:0]
                 if (temp_is_zero)
                 begin
                     increment_pc_reg = 1'b1;
-                    movr_stage == 2'b10;
+                    movr_stage = 2'b10;
                 end
                 else
                 begin 
@@ -314,10 +312,10 @@ output wire [1:0]
             end
 
             else if ( movr_stage == 2'b10 )
-            {
+            begin
                 enable_delay_counter_reg = 1'b1;
                 movr_stage = 2'b00;
-            }
+            end
         end
 
     end
